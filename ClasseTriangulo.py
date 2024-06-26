@@ -1,6 +1,8 @@
 import math
 class Triangulo:
-    def __init__(self,a,b,c):
+    def __init__(self, a, b, c):
+        if not (a + b > c and a + c > b and b + c > a):
+            raise ValueError("Os lados fornecidos não formam um triângulo válido.")
         self.a = a
         self.b = b
         self.c = c
